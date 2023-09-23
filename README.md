@@ -1,2 +1,2 @@
 # java-utazas
-Java alkalmazások projektfeladat - Utazás
+Java alkalmazások projektfeladat - NB-1
