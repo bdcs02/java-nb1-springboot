@@ -29,9 +29,6 @@ public class HomeController {
 
     @GetMapping("/clubs")
     public String ClubsView() {
-        //Itt is a klub táblából a megjelenítést néztem de nem ment :D
-        /*List<Clubs> clubsList = clubsRepository.findAll();
-        model.addAttribute("clubsList", clubsList); */
         return "clubsView";
     }
 
@@ -40,9 +37,5 @@ public class HomeController {
         return "playersView";
     }
 
-    @GetMapping("/contact")
-    public String ContactView() {
-        return "contactView";
-    }
 
 }
