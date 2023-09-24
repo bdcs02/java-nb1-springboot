@@ -1,0 +1,14 @@
+img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+}
+
+nav div ul li a {
+    color: saddlebrown;
+    font-size: large;
+}
+
+nav div ul li a:hover {
+    color: darkolivegreen;
+}

@@ -37,5 +37,9 @@ public class HomeController {
         return "playersView";
     }
 
+    @GetMapping("/learnmore")
+    public String LearnView() {
+        return "learnView";
+    }
 
 }
