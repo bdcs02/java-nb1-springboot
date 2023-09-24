@@ -1,9 +1,5 @@
 package com.java_nb1.model;
-import com.java_nb1.controller.ContactController;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
 public class ContactFormModel {
     private Integer id;
     private String name;
