@@ -8,5 +8,19 @@
 </head>
 <body>
 <h1>List of the clubs: </h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Club name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="club : ${clubsList}">
+        <td th:text="${club.getId()}"></td>
+        <td th:text="${club.getClubName()}"></td>
+    </tr>
+    </tbody>
+</table>
 </body>
 </html>
