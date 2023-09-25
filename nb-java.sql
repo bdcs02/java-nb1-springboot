@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Sze 24. 11:27
+-- Létrehozás ideje: 2023. Sze 25. 20:57
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.6
 
@@ -410,6 +410,28 @@ INSERT INTO `labdarugo` (`id`, `mezszam`, `klubid`, `posztid`, `utonev`, `vezete
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `player_posts`
+--
+
+CREATE TABLE `player_posts` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `player_posts_model`
+--
+
+CREATE TABLE `player_posts_model` (
+  `id` int(11) NOT NULL,
+  `nev` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `poszt`
 --
 
@@ -441,6 +463,21 @@ INSERT INTO `poszt` (`id`, `nev`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `usernb`
+--
+
+CREATE TABLE `usernb` (
+  `id` int(11) NOT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `password_hash` varchar(255) DEFAULT NULL,
+  `role` varchar(255) DEFAULT NULL,
+  `username` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `user_nb`
 --
 
@@ -449,8 +486,16 @@ CREATE TABLE `user_nb` (
   `username` varchar(255) NOT NULL,
   `password_hash` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) DEFAULT NULL,
+  `role` varchar(255) NOT NULL DEFAULT 'ROLE_USER'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `user_nb`
+--
+
+INSERT INTO `user_nb` (`id`, `username`, `password_hash`, `email`, `name`, `role`) VALUES
+(1, 'adadadadad', 'dasadada', 'adadadad@aisfasf.com', 'adadadadadsad', '');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -477,9 +522,27 @@ ALTER TABLE `labdarugo`
   ADD KEY `posztid` (`posztid`);
 
 --
+-- A tábla indexei `player_posts`
+--
+ALTER TABLE `player_posts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `player_posts_model`
+--
+ALTER TABLE `player_posts_model`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `poszt`
 --
 ALTER TABLE `poszt`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- A tábla indexei `usernb`
+--
+ALTER TABLE `usernb`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -501,10 +564,16 @@ ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT a táblához `usernb`
+--
+ALTER TABLE `usernb`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT a táblához `user_nb`
 --
 ALTER TABLE `user_nb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Megkötések a kiírt táblákhoz
