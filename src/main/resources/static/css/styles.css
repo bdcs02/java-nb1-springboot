@@ -2,7 +2,7 @@ li a button {
     margin-left: 5px;
 }
 body {
-    background-image: url("./images/pxfuel.jpg");
+    background-image: url("images/pxfuel.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
