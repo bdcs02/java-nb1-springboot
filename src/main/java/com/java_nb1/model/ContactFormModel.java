@@ -1,14 +1,22 @@
 package com.java_nb1.model;
-import com.java_nb1.controller.ContactController;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+
+import java.util.Date;
+
 public class ContactFormModel {
     private Integer id;
     private String name;
     private String email;
     private String message;
+
+    public Date getCreated_at() {
+        return created_at;
+    }
+
+    public void setCreated_at(Date created_at) {
+        this.created_at = created_at;
+    }
+
+    private Date created_at;
 
     public String getName() {
         return name;
@@ -22,9 +30,7 @@ public class ContactFormModel {
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) { this.email = email; }
 
     public String getMessage() {
         return message;

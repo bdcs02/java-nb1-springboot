@@ -3,28 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <title>NB-1 Soccer</title>
+    <!-- Add these lines to your HTML template -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="icon" type="image/x-icon" href="/css/images/favicon-32x32.png">
-
 </head>
 <body>
 <!-- NAVBAR egyszerű beszúrása, h ne kelljen mindenhova  -->
 <div th:insert="nav"></div>
+<div th:insert="menu"></div>
 
 <div class="container">
     <div class="content">
-    <h1>Hungarian Football Hub</h1>
-    <h2>Welcome to the World of Hungarian Football: Explore Clubs and Players</h2>
-    <p>
-        Discover the rich history and talent of Hungarian football on our website.
-        Explore the top clubs and their star players, and stay updated with the latest news, scores, and statistics.
-        Whether you're a die-hard fan or a casual enthusiast, our platform has something for everyone.
-    </p>
-    <a class="btn btn-primary" th:href="@{/learnmore}">Learn more..</a>
+        <h1>Hungarian Football Hub</h1>
+        <h2>Welcome to the World of Hungarian Football: Explore Clubs and Players</h2>
+        <p>
+            Discover the rich history and talent of Hungarian football on our website.
+            Explore the top clubs and their star players, and stay updated with the latest news, scores, and statistics.
+            Whether you're a die-hard fan or a casual enthusiast, our platform has something for everyone.
+        </p>
+        <a class="btn btn-primary" th:href="@{/learnmore}">Learn more..</a>
     </div>
 </div>
 </body>
