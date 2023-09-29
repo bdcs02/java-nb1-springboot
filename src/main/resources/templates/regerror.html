@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>REGISTER ERROR</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="icon" type="image/x-icon" href="/css/images/favicon-32x32.png">
+
+</head>
+<body>
+<div th:insert="nav"></div>
+<div class="ml-5 mt-3">
+    <h3 th:text="${msg}" />
+    <a class="btn btn-primary" th:href="@{/signupWeb}" role="button">Try again</a>
+    <a class="btn btn-secondary" th:href="@{/}" role="button">Home</a>
+</div>
+</body>
+</html>
