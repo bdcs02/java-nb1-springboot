@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <meta charset="UTF-8">
     <title>Contact Us</title>
@@ -8,15 +9,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/stylesContact.css">
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesContacts.css">
     <link rel="icon" type="image/x-icon" href="/css/images/favicon-32x32.png">
 </head>
 <body>
 <div th:insert="nav"></div>
-<div>
-    <h1>This is Contact</h1>
-<h1>Contact Us</h1>
+<div class="content">
+    <h3>This is Contact</h3>
+    <h5>Contact Us</h5>
     <form action="#" th:action="@{/contactResult}" th:object="${attr1}" method="post">
         <div class="form-group">
             <label for="name">Name:</label>

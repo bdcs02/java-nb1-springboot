@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/styles.css">
     <link rel="icon" type="image/x-icon" href="/css/images/favicon-32x32.png">
 </head>
 <body>
-<h1>This is the login page</h1>
-<h2>Login</h2>
-<form th:action="@{/login}" method="POST">
+<!-- <form th:action="@{/loginWeb}" method="POST">
     <label for="username">Username:</label>
     <input type="text" id="username" name="username" required><br><br>
 
@@ -17,6 +18,45 @@
     <input type="password" id="password" name="password" required><br><br>
 
     <input type="submit" value="Login">
-</form>
+</form> -->
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 mt-4">
+            <div class="card">
+                <div class="card-header">Login</div>
+                <div class="card-body">
+                    <form class="form-horizontal" action="#" th:action="@{/loginWeb}" method="POST">
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Username</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="text" id="username" name="username" required><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Password</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="password" id="password" name="password" required><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button" value="Login">Login</button>
+                        </div>
+                        <div class="login-register">
+                            <a th:href="@{/signupWeb}">Register</a>
+                            <a th:href="@{/}">Home</a>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
