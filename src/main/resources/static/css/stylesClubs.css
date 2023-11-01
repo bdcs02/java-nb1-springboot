@@ -1,0 +1,17 @@
+.table {
+    margin: 0 auto;
+    border: darkolivegreen 2px solid;
+}
+
+a {
+    margin: 5px;
+}
+
+body {
+    background-image: url("images/pxfuel.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 10px;
+}

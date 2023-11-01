@@ -1,31 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>SignUp</title>
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/signupStyles.css">
     <link rel="icon" type="image/x-icon" href="/css/images/favicon-32x32.png">
+
 </head>
 <body>
-<h1>This is the signup page.</h1>
-<h2>Sign Up</h2>
-<form th:action="@{/}" method="POST">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br><br>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-5 mt-4">
+            <div class="card">
+                <div class="card-header">Register</div>
+                <div class="card-body">
+                    <form class="form-horizontal" action="#" th:action="@{/register_process}" th:object="${reg}" method="POST">
+                        <div class="form-group">
+                            <label for="name" class="cols-sm-2 control-label">Your Name</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                    <input type="text" id="name" name="name" th:field="*{name}" required ><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="cols-sm-2 control-label">Your Email</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                    <input type="email" id="email" name="email" th:field="*{email}" required><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username" class="cols-sm-2 control-label">Username</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                    <input type="text" id="username"  name="username" th:field="*{username}" required minlength="5"><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password" class="cols-sm-2 control-label">Password</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="password" id="password" name="password" th:field="*{password}" required minlength="8"><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="password_confirm" class="cols-sm-2 control-label">Confirm Password</label>
+                            <div class="cols-sm-5">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                    <input type="password" id="password_confirm" th:field="*{password_confirm}" name="confirm_password" required><br><br>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group ">
+                            <button type="submit" class="btn btn-primary btn-lg btn-block login-button">Register</button>
+                        </div>
+                        <div class="login-register">
+                            <a th:href="@{/loginWeb}">Login</a>
+                            <a th:href="@{/}">Home</a>
+                        </div>
+                    </form>
+                </div>
 
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required><br><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required><br><br>
-
-    <label for="confirm_password">Confirm Password:</label>
-    <input type="password" id="confirm_password" name="confirm_password" required><br><br>
-
-    <input type="submit" value="Sign Up">
-</form>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
