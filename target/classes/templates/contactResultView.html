@@ -7,17 +7,16 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/styles.css">
+    <link rel="stylesheet" type="text/css" href="/css/stylesContacts.css">
     <link rel="icon" type="image/x-icon" href="/css/images/favicon-32x32.png">
 </head>
 <body>
     <div th:insert="nav"></div>
-    <div>
+    <div class="container mt-5 ml-5">
 
     <h1>Result</h1>
-    <p th:text="'Name: ' + ${attr2.name}" />
     <p th:text="'Message: ' + ${attr2.message}" />
     <a href="/contact">Submit another message</a>
-</div>
+    </div>
 </body>
 </html>

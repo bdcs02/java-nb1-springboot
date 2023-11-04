@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2023. Sze 24. 11:27
+-- Létrehozás ideje: 2023. Okt 06. 15:06
 -- Kiszolgáló verziója: 10.4.24-MariaDB
 -- PHP verzió: 8.1.6
 
@@ -34,6 +34,30 @@ CREATE TABLE `contact` (
   `message` text DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `contact`
+--
+
+INSERT INTO `contact` (`id`, `name`, `email`, `message`, `created_at`) VALUES
+(1, 'mi van', 'mivanitt@gmail.com', 'szia\r\n', '2023-09-29 15:01:04'),
+(2, 'mi van', 'mivanitt@gmail.com', 'szia\r\n', '2023-09-29 15:01:19'),
+(3, 'mi van', 'mivanitt@gmail.com', 'szia\r\n', '2023-09-29 15:02:38'),
+(4, 'sdadda', 'dadadsadda@gmail.com', 'SADADADADADADADASDS', '2023-09-29 15:07:16'),
+(5, 'almafa', 'kiraly@gmail.com', 'asfafafafafaf', '2023-09-29 15:08:49'),
+(6, 'almafa', 'kiraly@gmail.com', 'asfafafafafaf', '2023-09-29 15:09:04'),
+(7, 'mi van ittasdadada', 'vaittfaszom@gmail.com', 'dasdsdadsdaa', '2023-09-29 15:13:04'),
+(8, 'VENDÉG_NÉV', 'VENDÉG_EMAIL', 'sdadada', '2023-09-29 15:28:02'),
+(9, 'VENDÉG_NÉV', 'VENDÉG_EMAIL', 'hallo itt az a', '2023-09-29 15:28:20'),
+(10, 'adsda', 'adasdadad@gmail.com', 'adadadadada', '2023-09-29 15:33:10'),
+(11, 'dasadd', 'adsada@gmail.com', 'asdadsd\r\n', '2023-09-29 15:35:03'),
+(12, 'asddadasas', 'adsadadd@gmail.comdsa', 'adadad', '2023-09-29 15:38:23'),
+(13, 'adasdaads', 'dsadassadaad@gmail.com', 'asdaddadadadadasa', '2023-09-29 15:42:01'),
+(14, 'adsdaadda', 'adadadadad@gmail.com', 'adadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.com', '2023-09-29 15:42:51'),
+(15, 'adsaddad', 'dadadsdasdasads@gmail.com', 'dasasdsdadsadasdasdasdasdsa', '2023-09-29 15:44:20'),
+(16, 'hallo', 'hallo@giasfnasif.com', 'amsdkaadadadadadadad', '2023-09-29 15:44:39'),
+(17, 'adadaad', 'dadaadaaddadada@gma.ro', 'adadadadaddadd', '2023-09-29 15:46:51'),
+(18, 'domi', 'asdnaudahdasuda@gmail.com', 'wqiodbasuzdgaszdudba szia anya\r\n', '2023-09-29 16:33:28');
 
 -- --------------------------------------------------------
 
@@ -405,7 +429,9 @@ INSERT INTO `labdarugo` (`id`, `mezszam`, `klubid`, `posztid`, `utonev`, `vezete
 (315, 18, 11, 6, 'Ákos', 'Zsidai', '1990-10-20', '-1', '0', '200'),
 (316, 14, 3, 1, 'György', 'Óvári', '1997-03-01', '-1', '0', '300'),
 (317, 1, 2, 4, 'Zoltán', 'Fehér', '1996-09-20', '-1', '0', '150'),
-(318, 29, 5, 4, 'Dániel', 'Sipos', '1993-07-16', '-1', '0', '100');
+(318, 29, 5, 4, 'Dániel', 'Sipos', '1993-07-16', '-1', '0', '100'),
+(319, 25, 5, 5, 'John', 'Doe', '1995-08-30', '1', '0', '400'),
+(323, 231, 11, 4, 'Pityunemkiraly', 'Kis', '1997-01-23', '-1', '0', '150');
 
 -- --------------------------------------------------------
 
@@ -441,6 +467,44 @@ INSERT INTO `poszt` (`id`, `nev`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Tábla szerkezet ehhez a táblához `szemelyek`
+--
+
+CREATE TABLE `szemelyek` (
+  `id` bigint(20) NOT NULL,
+  `cim` varchar(255) DEFAULT NULL,
+  `kor` int(11) NOT NULL,
+  `nev` varchar(255) DEFAULT NULL,
+  `suly` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `szemelyek`
+--
+
+INSERT INTO `szemelyek` (`id`, `cim`, `kor`, `nev`, `suly`) VALUES
+(1, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(2, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(3, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(4, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(5, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(6, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(7, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(8, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(9, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(10, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(11, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(12, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(13, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(14, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(15, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(16, 'Szeged', 22, 'Nagy Ilona', 72.3),
+(17, 'Kecskemet', 35, 'Kovacs Tibor', 77.5),
+(18, 'Szeged', 22, 'Nagy Ilona', 72.3);
+
+-- --------------------------------------------------------
+
+--
 -- Tábla szerkezet ehhez a táblához `user_nb`
 --
 
@@ -449,8 +513,24 @@ CREATE TABLE `user_nb` (
   `username` varchar(255) NOT NULL,
   `password_hash` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `name` varchar(255) DEFAULT NULL
+  `name` varchar(255) DEFAULT NULL,
+  `role` varchar(255) NOT NULL DEFAULT 'ROLE_USER',
+  `password_confirm` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `user_nb`
+--
+
+INSERT INTO `user_nb` (`id`, `username`, `password_hash`, `email`, `name`, `role`, `password_confirm`) VALUES
+(26, 'kiralyv2', '$2a$10$5akLb3DLj/BnETZt3pdzxOBZRoEZ1eBZzZw.95Nz4EqftD97dtUHO', 'kiralyv@gmail.com', 'Király Vagyok', 'USER', 'teszt124'),
+(27, 'teszelo', '$2a$10$hpzmVElLtHyJTwXTJTy4lO1be9w.R.q9N5HrrjKKQ71CRf0oKVp9q', 'tesztelekmost@gmail.com', 'teszt jani', 'USER', 'kiralyvagyok'),
+(28, 'admin', '$2a$10$vVfmCUOZTjokEg67ZruQqOTtMfkGGGVNK0SKBTuJgq7gtdb2n.Dq.', 'admin@admin.com', 'admin', 'ROLE_ADMIN', 'admin123'),
+(29, 'domi1', '$2a$10$AKdCJYm2QpFC/2x8myv6OutnIvZt/guQcETPCLX7bmAo2wLxitxjy', 'd@gmail.com', 'd', 'USER', 'asdasdasd'),
+(31, 'kalanyos123', '$2a$10$Jkvp71tKayuO7FjL6PKFUe24eFZEeZEIiJ0yMv12MPj8Sg2W6hbCK', 'kalany@gm.com', 'Kalányos József', 'USER', 'kalanyos123'),
+(33, 'dadadsdadadaads', '$2a$10$DefWCMCEI3VB.AKzVS7re.XUs8UoXBmT6TkAeAHUG9WXnk0EI6JJS', 'asdadasasasd@gmail.com', 'adsadsada', 'USER', 'qwertzuiop'),
+(34, 'asdkiralyasd', '$2a$10$ziyHoK7kWpQFVJ0Qzb2fIu1wVmNbbl7au.Rrx7wN1/QHB6D6W970u', 'asdlol@gmail.ro', 'domikiraly', 'USER', 'asdkiralyasd'),
+(35, 'ayqayq', '$2a$10$gcfSlsF/aJ5dM47/W38LsuEeyECNj1RdrblDeLhMwKvtGOZm9RAz6', 'asidaufdga7a@gmail.com', 'domikiraly', 'USER', 'asdasdasd');
 
 --
 -- Indexek a kiírt táblákhoz
@@ -483,6 +563,12 @@ ALTER TABLE `poszt`
   ADD PRIMARY KEY (`id`);
 
 --
+-- A tábla indexei `szemelyek`
+--
+ALTER TABLE `szemelyek`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- A tábla indexei `user_nb`
 --
 ALTER TABLE `user_nb`
@@ -498,13 +584,25 @@ ALTER TABLE `user_nb`
 -- AUTO_INCREMENT a táblához `contact`
 --
 ALTER TABLE `contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT a táblához `labdarugo`
+--
+ALTER TABLE `labdarugo`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=324;
+
+--
+-- AUTO_INCREMENT a táblához `szemelyek`
+--
+ALTER TABLE `szemelyek`
+  MODIFY `id` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT a táblához `user_nb`
 --
 ALTER TABLE `user_nb`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- Megkötések a kiírt táblákhoz
