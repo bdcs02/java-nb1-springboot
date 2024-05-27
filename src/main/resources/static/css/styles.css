@@ -2,11 +2,25 @@ li a button {
     margin-left: 5px;
 }
 body {
-    background-image: url("./images/pxfuel.jpg");
+    background-image: url("images/pxfuel.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
 }
 
+.content {
+    width: 75%;
+    margin: 30px auto;
+    padding: 5px;
+}
+
+.center{
+    display: flex;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
 
