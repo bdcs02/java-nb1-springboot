@@ -41,23 +41,9 @@ CREATE TABLE `contact` (
 
 INSERT INTO `contact` (`id`, `name`, `email`, `message`, `created_at`) VALUES
 (1, 'mi van', 'mivanitt@gmail.com', 'szia\r\n', '2023-09-29 15:01:04'),
-(2, 'mi van', 'mivanitt@gmail.com', 'szia\r\n', '2023-09-29 15:01:19'),
-(3, 'mi van', 'mivanitt@gmail.com', 'szia\r\n', '2023-09-29 15:02:38'),
-(4, 'sdadda', 'dadadsadda@gmail.com', 'SADADADADADADADASDS', '2023-09-29 15:07:16'),
-(5, 'almafa', 'kiraly@gmail.com', 'asfafafafafaf', '2023-09-29 15:08:49'),
-(6, 'almafa', 'kiraly@gmail.com', 'asfafafafafaf', '2023-09-29 15:09:04'),
-(7, 'mi van ittasdadada', 'vaittfaszom@gmail.com', 'dasdsdadsdaa', '2023-09-29 15:13:04'),
-(8, 'VENDÉG_NÉV', 'VENDÉG_EMAIL', 'sdadada', '2023-09-29 15:28:02'),
-(9, 'VENDÉG_NÉV', 'VENDÉG_EMAIL', 'hallo itt az a', '2023-09-29 15:28:20'),
-(10, 'adsda', 'adasdadad@gmail.com', 'adadadadada', '2023-09-29 15:33:10'),
-(11, 'dasadd', 'adsada@gmail.com', 'asdadsd\r\n', '2023-09-29 15:35:03'),
-(12, 'asddadasas', 'adsadadd@gmail.comdsa', 'adadad', '2023-09-29 15:38:23'),
 (13, 'adasdaads', 'dsadassadaad@gmail.com', 'asdaddadadadadasa', '2023-09-29 15:42:01'),
 (14, 'adsdaadda', 'adadadadad@gmail.com', 'adadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.comadadadadad@gmail.com', '2023-09-29 15:42:51'),
 (15, 'adsaddad', 'dadadsdasdasads@gmail.com', 'dasasdsdadsadasdasdasdasdsa', '2023-09-29 15:44:20'),
-(16, 'hallo', 'hallo@giasfnasif.com', 'amsdkaadadadadadadad', '2023-09-29 15:44:39'),
-(17, 'adadaad', 'dadaadaaddadada@gma.ro', 'adadadadaddadd', '2023-09-29 15:46:51'),
-(18, 'domi', 'asdnaudahdasuda@gmail.com', 'wqiodbasuzdgaszdudba szia anya\r\n', '2023-09-29 16:33:28');
 
 -- --------------------------------------------------------
 
@@ -526,7 +512,6 @@ INSERT INTO `user_nb` (`id`, `username`, `password_hash`, `email`, `name`, `role
 (26, 'kiralyv2', '$2a$10$5akLb3DLj/BnETZt3pdzxOBZRoEZ1eBZzZw.95Nz4EqftD97dtUHO', 'kiralyv@gmail.com', 'Király Vagyok', 'USER', 'teszt124'),
 (27, 'teszelo', '$2a$10$hpzmVElLtHyJTwXTJTy4lO1be9w.R.q9N5HrrjKKQ71CRf0oKVp9q', 'tesztelekmost@gmail.com', 'teszt jani', 'USER', 'kiralyvagyok'),
 (28, 'admin', '$2a$10$vVfmCUOZTjokEg67ZruQqOTtMfkGGGVNK0SKBTuJgq7gtdb2n.Dq.', 'admin@admin.com', 'admin', 'ROLE_ADMIN', 'admin123'),
-(29, 'domi1', '$2a$10$AKdCJYm2QpFC/2x8myv6OutnIvZt/guQcETPCLX7bmAo2wLxitxjy', 'd@gmail.com', 'd', 'USER', 'asdasdasd'),
 (31, 'kalanyos123', '$2a$10$Jkvp71tKayuO7FjL6PKFUe24eFZEeZEIiJ0yMv12MPj8Sg2W6hbCK', 'kalany@gm.com', 'Kalányos József', 'USER', 'kalanyos123'),
 (33, 'dadadsdadadaads', '$2a$10$DefWCMCEI3VB.AKzVS7re.XUs8UoXBmT6TkAeAHUG9WXnk0EI6JJS', 'asdadasasasd@gmail.com', 'adsadsada', 'USER', 'qwertzuiop'),
 (34, 'asdkiralyasd', '$2a$10$ziyHoK7kWpQFVJ0Qzb2fIu1wVmNbbl7au.Rrx7wN1/QHB6D6W970u', 'asdlol@gmail.ro', 'domikiraly', 'USER', 'asdkiralyasd'),
